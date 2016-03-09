@@ -47,16 +47,20 @@ $(document).ready(function() {
     
     $("div.no").click(nextQuestion);
     
+     var audio1 = document.createElement('audio');
+        audio1.setAttribute('src', 'sounds/adriantnt_texture_scratch.mp3');
+    
     // Event when mouse hovers over element
 	$("div.yes").mouseenter(function () {
         // Get position of div.yes element
         var position = $(this).position();
+        audio1.play();
         
         $("div.yes-line").animate({
             // Animate width of line to touch left
             // corner of div.yes element
             width: position.left
-        }, 500);
+        }, 400);
     });
     
     // Event when mouse leaves element
@@ -64,22 +68,23 @@ $(document).ready(function() {
         // Animate width of line back to 0
         $("div.yes-line").animate({
             width: 0
-        }, 500);
+        }, 400);
     });
     
     $("div.no").mouseenter(function () {
         var divNo = $(this);
         var position = divNo.position();
+        audio1.play();
    
         $("div.no-line").animate({
             width: window.innerWidth - (position.left + divNo.width()) + 1
-        }, 500);
+        }, 400); 
     });
     
     $("div.no").mouseout(function () {
         $("div.no-line").animate({
             width: 0
-        }, 500);
+        }, 400);
     });
     
 });
