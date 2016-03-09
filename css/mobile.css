@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'CooperHewittLight';
+    src: url('../fonts/CooperHewitt-Light.otf');
+}
+  
+p {
+    margin-top: 150px;
+    text-align: center;
+    color: white;
+    font-family: CooperHewittLight;
+    font-size: 24px;
+}
+
+
+/* ----------------- Start Grid for mobile screens ----------------- */
+    
+.container {
+    position: relative;
+    width: 100%;
+    /*max-width: 960px;*/ /* max width of content */
+    margin: 0 auto;
+    /*padding: 0 20px;*/
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* THIS SEEMS WRONG
+.column,
+.columns {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+*/
+  
+.column,
+.columns {
+    margin-left: 2.7%; /* column gutter */
+    float: left;
+    box-sizing: border-box;
+}    
+
+.column:first-child,
+.columns:first-child {
+    margin-left: 0;
+} /* prevents first column from acquiring a gutter on its left: typography 101 */
+
+.one.column,
+.one.columns                    { width: 5.85585586%; }
+.two.columns                    { width: 14.4117117%; }
+.three.columns                  { width: 22.9675676%;  }
+.four.columns                   { width: 31.5234234%; }
+.five.columns                   { width: 40.0792793%; }
+.six.columns                    { width: 48.6351351%;  }
+.seven.columns                  { width: 57.190991%; }
+.eight.columns                  { width: 65.7468469%; }
+.nine.columns                   { width: 74.3027027%;  }
+.ten.columns                    { width: 82.8585586%; }
+.eleven.columns                 { width: 91.4144144%; }
+.twelve.columns                 { width: 100%; margin-left: 0; }
+
+.one-third.column               { width: 30.6666666667%; }
+.two-thirds.column              { width: 65.3333333333%; }
+
+.one-half.column                { width: 48%; }
+  
+/* ----------------- End Grid for mobile screens ----------------- */
+
+/* ----------------- Misc Grid Commands ----------------- */
+
+/* Self Clearing Goodness: Fixes Issues with Float: Left; */
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+  
+  
+/* ERIN SHEA */
+.nav-logo {
+    display: block;
+    margin: 0 auto; /* center image */
+}
+  
+.yes:hover {
+    background-image: url("../images/yeshover.png");
+}
+
+.no:hover {
+    background-image: url("../images/nohover.png");
+}
